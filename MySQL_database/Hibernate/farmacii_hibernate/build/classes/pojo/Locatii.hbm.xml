@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="pojo.Locatii" table="locatii" catalog="farmacii"
+		optimistic-lock="version">
+		<id name="idLocatie" type="java.lang.Integer">
+			<column name="idLocatie" />
+			<generator class="identity" />
+		</id>
+		<property name="numar" type="string">
+			<column name="numar" length="45" />
+		</property>
+		<property name="strada" type="string">
+			<column name="strada" length="45" />
+		</property>
+		<property name="oras" type="string">
+			<column name="oras" length="45" />
+		</property>
+		<property name="judet" type="string">
+			<column name="judet" length="45" />
+		</property>
+		<property name="telefon" type="string">
+			<column name="telefon" length="45" />
+		</property>
+		<many-to-one name="farmacii" class="pojo.Farmacii"
+			fetch="select">
+			<column name="idFarmacie" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

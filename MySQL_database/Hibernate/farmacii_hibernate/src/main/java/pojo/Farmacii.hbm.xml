@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="pojo.Farmacii" table="farmacii" catalog="farmacii"
+		optimistic-lock="version">
+		<id name="idFarmacie" type="java.lang.Integer">
+			<column name="idFarmacie" />
+			<generator class="identity" />
+		</id>
+		<property name="denumire" type="string">
+			<column name="denumire" length="45" />
+		</property>
+		<property name="telefon" type="string">
+			<column name="telefon" length="45" />
+		</property>
+		<property name="sediu" type="string">
+			<column name="sediu" length="45" />
+		</property>
+		<set name="angajati" table="angajati" inverse="true"
+			lazy="true" fetch="select">
+			<key>
+				<column name="idFarmacie" />
+			</key>
+			<one-to-many class="pojo.Angajati" />
+		</set>
+		<set name="locatii" table="locatii" inverse="true"
+			lazy="true" fetch="select">
+			<key>
+				<column name="idFarmacie" />
+			</key>
+			<one-to-many class="pojo.Locatii" />
+		</set>
+	</class>
+</hibernate-mapping>
