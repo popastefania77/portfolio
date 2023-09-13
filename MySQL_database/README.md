@@ -6,7 +6,7 @@ Tehnologia folosita pentru crearea bazei de date: **MySql**.
 
 „ **MySql** este un sistem de gestiune a bazelor de date relationale, produsde compania **MySQL AB**. Este cel mai popular sistem de gestionare de acest fel.Se gaseste de obicei alaturi de limbajul **PHP** , insa cu **MySql** se pot construiaplicatii in orice limbaj. "
 
-                                                                                              - https://ro.wikipedia.org/wiki/MySQL
+                                                                                            - https://ro.wikipedia.org/wiki/MySQL
 
 Am realizat o baza de date in MySQL WORKBENCH , ea continand 3 tabele : **angajati, farmacii si locatii**. Asocierea dintre ele este de tipul M:1, respectiv 1:N.
 
