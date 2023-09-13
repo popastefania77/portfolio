@@ -101,7 +101,7 @@ def adaugare_in_baza_date():
 </head>
 <body>
     <p><a href={url_for('index')}>REVENIRE LA PAGINA PRINCIPALA</a></p>
-    <h1>Verificare existenta Număr de Înmatriculare in baza de date</h1>
+    <h1>Adaugare Număr de Înmatriculare in baza de date</h1>
     <form method="POST">
         <label for="numar_inmatriculare">Introduceți numărul de înmatriculare:</label>
         <input type="text" id="numar_inmatriculare" name="numar_inmatriculare" required>
